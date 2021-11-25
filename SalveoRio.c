@@ -74,7 +74,7 @@ void GerenciaMouse(int button, int state, int x, int y)
     glutPostRedisplay();
 }
 
-float unidade = 30.0f;//funcao usada na atualiza��o das coordenadas do objeto quando uma das setas � pressunada
+float unidade = 30.0f;//funcao usada na atualização das coordenadas do objeto quando uma das setas é pressunada
 
 //funcao teclado setas
 void TeclasEspeciais(int key, int x, int y)
@@ -91,13 +91,13 @@ void TeclasEspeciais(int key, int x, int y)
         case GLUT_KEY_UP:
             tipoLixeira += 1;
             if(tipoLixeira == 4)
-                tipoLixeira = 1;
+                tipoLixeira = 0;
 
             break;
 
         case GLUT_KEY_DOWN:
             tipoLixeira -= 1;
-            if(tipoLixeira == 0)
+            if(tipoLixeira == -1)
                 tipoLixeira = 3;
 
         break;
